@@ -1,0 +1,8 @@
+<div class="p-5 m-5">
+  <h2><%= @restaurant.name %></h2>
+  <p><%= @restaurant.address %></p>
+  <p><%= @restaurant.phone_number %></p>
+  <p><%= @restaurant.category %></p>
+  <br>
+   <p><%= link_to "Review the restaurant", new_restaurant_review_path(@restaurant)  %></p>
+</div>
