@@ -4,5 +4,13 @@
   <p><%= @restaurant.phone_number %></p>
   <p><%= @restaurant.category %></p>
   <br>
+    <% @restaurant.reviews.each do |review|%>
+    <%= review.content %>
+  <% review.rating.times do %>
+    <i class="far fa-star"></i>
+  <% end %>
+  <% end %>
+
+
    <p><%= link_to "Review the restaurant", new_restaurant_review_path(@restaurant)  %></p>
 </div>
